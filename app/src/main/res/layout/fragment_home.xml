@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".homeFrag">
+
+    <TextView
+        android:id="@+id/appNameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="15dp"
+        android:text="@string/shop"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/appNameText"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/grey"
+        android:text="@string/search_here"
+        android:id="@+id/makeSearch"
+        app:cornerRadius="12dp"
+        app:iconSize="25dp"
+        app:strokeWidth="2dp"
+        app:icon="@drawable/search"
+        app:iconTint="@color/grey"
+        app:iconGravity="start"
+        app:strokeColor="@color/grey"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        android:textAlignment="textStart"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/categoriesCard"
+        app:layout_constraintTop_toBottomOf="@+id/makeSearch">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fashionCategory"
+                android:text="@string/fashion"
+                app:icon="@drawable/fashion"
+                app:iconTint="@color/grey"
+                android:textColor="@color/grey"
+                app:iconGravity="top"
+                android:textAlignment="center"
+                app:iconSize="30dp"
+                android:backgroundTint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintEnd_toStartOf="@+id/stationaryCategory"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/stationaryCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="@string/stationary"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                app:icon="@drawable/stationary"
+                app:iconGravity="top"
+                app:iconSize="30dp"
+                app:iconTint="@color/grey"
+                app:layout_constraintEnd_toStartOf="@+id/sportsCategory"
+                app:layout_constraintStart_toEndOf="@+id/fashionCategory"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sportsCategory"
+                android:text="@string/sports"
+                app:icon="@drawable/sport"
+                app:iconTint="@color/grey"
+                android:textColor="@color/grey"
+                app:iconGravity="top"
+                android:textAlignment="center"
+                app:iconSize="30dp"
+                android:backgroundTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/stationaryCategory"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bikeCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:paddingTop="10dp"
+                android:text="@string/bikes"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                app:icon="@drawable/bicyclee"
+                app:iconGravity="top"
+                app:iconSize="30dp"
+                app:iconTint="@color/grey"
+                app:layout_constraintEnd_toEndOf="@+id/fashionCategory"
+                app:layout_constraintStart_toStartOf="@+id/fashionCategory"
+                app:layout_constraintTop_toBottomOf="@+id/fashionCategory" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/appliancesCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:paddingTop="10dp"
+                android:text="@string/appliances"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                app:icon="@drawable/appliances"
+                app:iconGravity="top"
+                app:iconSize="30dp"
+                app:iconTint="@color/grey"
+                app:layout_constraintEnd_toEndOf="@+id/stationaryCategory"
+                app:layout_constraintStart_toStartOf="@+id/stationaryCategory"
+                app:layout_constraintTop_toBottomOf="@+id/stationaryCategory" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/phonesCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:paddingTop="10dp"
+                android:text="@string/mobiles"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                app:icon="@drawable/mobiles"
+                app:iconGravity="top"
+                app:iconSize="30dp"
+                app:iconTint="@color/grey"
+                app:layout_constraintEnd_toEndOf="@+id/sportsCategory"
+                app:layout_constraintStart_toStartOf="@+id/sportsCategory"
+                app:layout_constraintTop_toBottomOf="@+id/sportsCategory" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/accessoriesCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:paddingTop="10dp"
+                android:text="@string/accessories"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                app:icon="@drawable/bags"
+                app:iconGravity="top"
+                app:iconSize="30dp"
+                app:iconTint="@color/grey"
+                app:layout_constraintEnd_toEndOf="@+id/bikeCategory"
+                app:layout_constraintStart_toStartOf="@+id/bikeCategory"
+                app:layout_constraintTop_toBottomOf="@+id/bikeCategory" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/makeupCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:paddingTop="10dp"
+                android:text="@string/makeup"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                app:icon="@drawable/makeup"
+                app:iconGravity="top"
+                app:iconSize="30dp"
+                app:iconTint="@color/grey"
+                app:layout_constraintEnd_toEndOf="@+id/appliancesCategory"
+                app:layout_constraintStart_toStartOf="@+id/appliancesCategory"
+                app:layout_constraintTop_toBottomOf="@+id/appliancesCategory" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/crockeryCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:paddingTop="10dp"
+                android:text="@string/crockery"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                app:icon="@drawable/plates"
+                app:iconGravity="top"
+                app:iconSize="30dp"
+                app:iconTint="@color/grey"
+                app:layout_constraintEnd_toEndOf="@+id/phonesCategory"
+                app:layout_constraintStart_toStartOf="@+id/phonesCategory"
+                app:layout_constraintTop_toBottomOf="@+id/phonesCategory" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forYouText"
+        android:text="@string/for_you"
+        android:layout_marginStart="10dp"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/categoriesCard"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/forYouText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/listOfProducts"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
